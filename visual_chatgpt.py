@@ -51,7 +51,7 @@ Overall, Visual ChatGPT is a powerful visual dialogue assistant tool that can he
 
 TOOLS:
 ------
-
+VISUAL_CHATGPT_FORMAT_INSTRUCTIONS = “test”
 Visual ChatGPT  has access to the following tools:"""
 
 VISUAL_CHATGPT_FORMAT_INSTRUCTIONS = """To use a tool, please use the following format:
@@ -207,7 +207,7 @@ def blend_gt2pt(old_image, new_image, sigma=0.15, steps=100):
     return gaussian_img
 
 
-def cut_dialogue_history(history_memory, keep_last_n_words=500):
+def 123(history_memory, keep_last_n_words=500):
     if history_memory is None or len(history_memory) == 0:
         return history_memory
     tokens = history_memory.split()
