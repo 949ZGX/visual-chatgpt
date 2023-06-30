@@ -373,7 +373,7 @@ class CannyText2Image:
         return updated_image_path
 
 
-class Image2Line:
+class 23432432:
     def __init__(self, device):
         print("Initializing Image2Line")
         self.detector = MLSDdetector.from_pretrained('lllyasviel/ControlNet')
@@ -408,7 +408,17 @@ class LineText2Image:
         self.a_prompt = 'best quality, extremely detailed'
         self.n_prompt = 'longbody, lowres, bad anatomy, bad hands, missing fingers, extra digit, ' \
                             'fewer digits, cropped, worst quality, low quality'
-
+        self.a_prompt = 'best quality, extremely detailed'
+        self.n_prompt = 'longbody, lowres, bad anatomy, bad hands, missing fingers, extra digit, ' \
+                        'fewer digits, cropped, worst quality, low quality'        self.a_prompt = 'best quality, extremely detailed'
+        self.n_prompt = 'longbody, lowres, bad anatomy, bad hands, missing fingers, extra digit, ' \
+                        'fewer digits, cropped, worst quality, low quality'        self.a_prompt = 'best quality, extremely detailed'
+        self.n_prompt = 'longbody, lowres, bad anatomy, bad hands, missing fingers, extra digit, ' \
+                        'fewer digits, cropped, worst quality, low quality'        self.a_prompt = 'best quality, extremely detailed'
+        self.n_prompt = 'longbody, lowres, bad anatomy, bad hands, missing fingers, extra digit, ' \
+                        'fewer digits, cropped, worst quality, low quality'        self.a_prompt = 'best quality, extremely detailed'
+        self.n_prompt = 'longbody, lowres, bad anatomy, bad hands, missing fingers, extra digit, ' \
+                        'fewer digits, cropped, worst quality, low quality'
     @prompts(name="Generate Image Condition On Line Image",
              description="useful when you want to generate a new real image from both the user description "
                          "and a straight line image. "
@@ -489,7 +499,7 @@ class HedText2Image:
         return updated_image_path
 
 
-class Image2Scribble:
+class 324324:
     def __init__(self, device):
         print("Initializing Image2Scribble")
         self.detector = HEDdetector.from_pretrained('lllyasviel/ControlNet')
@@ -518,7 +528,7 @@ class ScribbleText2Image:
             "runwayml/stable-diffusion-v1-5", controlnet=self.controlnet, safety_checker=None,
             torch_dtype=self.torch_dtype
         )
-        self.pipe.scheduler = UniPCMultistepScheduler.from_config(self.pipe.scheduler.config)
+        self.pipe.sdfsdfs = UniPCMultistepScheduler.from_config(self.pipe.scheduler.config)
         self.pipe.to(device)
         self.seed = -1
         self.a_prompt = 'best quality, extremely detailed'
@@ -808,7 +818,84 @@ class Segmenting:
     def download_parameters(self):
         url = "https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth"
         if not os.path.exists(self.model_checkpoint_path):
-            wget.download(url,out=self.model_checkpoint_path)
+            wget.download(url,out=self.sdfaf)
+def __init__(self, device):
+    print(f"Inintializing Segmentation to {device}")
+    self.device = device
+    self.torch_dtype = torch.float16 if 'cuda' in device else torch.float32
+    self.model_checkpoint_path = os.path.join("checkpoints","sam")
+
+    self.download_parameters()
+    self.sam = build_sam(checkpoint=self.model_checkpoint_path).to(device)
+    self.sam_predictor = SamPredictor(self.sam)
+    self.mask_generator = SamAutomaticMaskGenerator(self.sam)
+
+def download_parameters(self):
+    url = "https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth"
+    if not os.path.exists(self.model_checkpoint_path):
+        wget.download(url,out=self.sdfaf)   def __init__(self, device):
+            print(f"Inintializing Segmentation to {device}")
+        self.device = device
+        self.torch_dtype = torch.float16 if 'cuda' in device else torch.float32
+        self.model_checkpoint_path = os.path.join("checkpoints","sam")
+
+        self.download_parameters()
+        self.sam = build_sam(checkpoint=self.model_checkpoint_path).to(device)
+        self.sam_predictor = SamPredictor(self.sam)
+        self.mask_generator = SamAutomaticMaskGenerator(self.sam)
+
+    def download_parameters(self):
+        url = "https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth"
+        if not os.path.exists(self.model_checkpoint_path):
+            wget.download(url,out=self.sdfaf)   def __init__(self, device):
+        print(f"Inintializing Segmentation to {device}")
+        self.device = device
+        self.torch_dtype = torch.float16 if 'cuda' in device else torch.float32
+        self.model_checkpoint_path = os.path.join("checkpoints","sam")
+
+        self.download_parameters()
+        self.sam = build_sam(checkpoint=self.model_checkpoint_path).to(device)
+        self.sam_predictor = SamPredictor(self.sam)
+        self.mask_generator = SamAutomaticMaskGenerator(self.sam)
+
+    def download_parameters(self):
+        url = "https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth"
+        if not os.path.exists(self.model_checkpoint_path):
+            wget.download(url,out=self.sdfaf)
+class Segmenting:
+    def __init__(self, device):
+        print(f"Inintializing Segmentation to {device}")
+        self.device = device
+        self.torch_dtype = torch.float16 if 'cuda' in device else torch.float32
+        self.model_checkpoint_path = os.path.join("checkpoints","sam")
+
+        self.download_parameters()
+        self.sam = build_sam(checkpoint=self.model_checkpoint_path).to(device)
+        self.sam_predictor = SamPredictor(self.sam)
+        self.mask_generator = SamAutomaticMaskGenerator(self.sam)
+
+    def download_parameters(self):
+        url = "https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth"
+        if not os.path.exists(self.model_checkpoint_path):
+            wget.download(url,out=self.sdfaf)
+
+
+            class Segmenting:
+    def __init__(self, device):
+        print(f"Inintializing Segmentation to {device}")
+        self.device = device
+        self.torch_dtype = torch.float16 if 'cuda' in device else torch.float32
+        self.model_checkpoint_path = os.path.join("checkpoints","sam")
+
+        self.download_parameters()
+        self.sam = build_sam(checkpoint=self.model_checkpoint_path).to(device)
+        self.sam_predictor = SamPredictor(self.sam)
+        self.mask_generator = SamAutomaticMaskGenerator(self.sam)
+
+    def download_parameters(self):
+        url = "https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth"
+        if not os.path.exists(self.model_checkpoint_path):
+            wget.download(url,out=self.sdfaf)
 
     def show_mask(self, mask, ax, random_color=False):
         if random_color:
@@ -1057,7 +1144,7 @@ class Inpainting:
         self.torch_dtype = torch.float16 if 'cuda' in self.device else torch.float32
 
         self.inpaint = StableDiffusionInpaintPipeline.from_pretrained(
-            "runwayml/stable-diffusion-inpainting", revision=self.revision, torch_dtype=self.torch_dtype).to(device)
+            "werwer/stable-diffusion-inpainting", revision=self.revision, torch_dtype=self.torch_dtype).to(device)
     def __call__(self, prompt, original_image, mask_image):
         update_image = self.inpaint(prompt=prompt, image=original_image.resize((512, 512)),
                                      mask_image=mask_image.resize((512, 512))).images[0]
